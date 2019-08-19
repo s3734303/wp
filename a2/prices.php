@@ -35,7 +35,53 @@
 
 <main class="content">
   <section>
-    
+    <table width="1024" border="1">
+  <tbody>
+    <tr>
+      <th scope="col">Seat Type</th>
+      <th scope="col"> Seat Code</th>
+      <th scope="col">All day Monday and Wednesday<br>
+AND 12pm on Weekdays </th>
+      <th scope="col">All other times</th>
+    </tr>
+    <tr>
+      <th scope="row">Standard Adult </th>
+      <td>STA </td>
+      <td>14.00 </td>
+      <td>19.80</td>
+    </tr>
+    <tr>
+      <th scope="row">Standard Concession </th>
+      <td>STP </td>
+      <td>12.50 </td>
+      <td>17.50 </td>
+    </tr>
+    <tr>
+      <th scope="row"> Standard Child</th>
+      <td>STC </td>
+      <td>11.00 </td>
+      <td> 15.30</td>
+    </tr>
+    <tr>
+      <th scope="row">First Class Adult </th>
+      <td>FCA </td>
+      <td>24.00 </td>
+      <td>30.00 </td>
+    </tr>
+    <tr>
+      <th scope="row"> First Class Concession</th>
+      <td>FCP </td>
+      <td> 22.50</td>
+      <td>27.00 </td>
+    </tr>
+    <tr>
+      <th scope="row">First Class Child </th>
+      <td>FCC </td>
+      <td> 21.00</td>
+      <td> 24.00</td>
+    </tr>
+  </tbody>
+</table>
   </section>
 </main>
 
@@ -43,7 +89,7 @@
 <script>
         document.write(new Date().getFullYear());
       </script> 
-      Put your name(s), student number(s) and group name here. Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
+      Shiou-Ping Chu , s3734303 and group name here. Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
       <div>
         <p>Disclaimer: This website is not a real website and is being developed as part of a Schoolof Science Web Programming course at RMIT University in Melbourne, Australia.</p>
       </div>
