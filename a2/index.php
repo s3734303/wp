@@ -16,26 +16,34 @@
   <body style="padding-top: 70px">
 
   <header>
-		<div class="header" >
-<!-- Creative Commons image sourced from https://www.freepik.com/free-photos-vectors/icon and used for educational purposes only -->		<a href="index.php"><img src="../media/cinema-logo.png" alt="" width="100" class="title"></a>
-			<h1 class="title">Cinema</h1>
-	  </div>	 
+	  <div>
+		  <div id="nav-logo" class="header">
+<!-- Creative Commons image sourced from https://www.freepik.com/free-photos-vectors/icon and used for educational purposes only -->		<a href="index.php"><img src="../media/cinema-logo.png" alt="" width="100"  class="logo"></a>
+			<h1 class="logo" >Cinema</h1>
+			</div>
+		  
+		  
+		  
+	  <nav> 
+		  <div id="navbar">
+		 	 <a href="index.php">About Us</a> </li>
+	  		<a href="prices.php">Prices</a> </li>      
+	 		<a href="nowshowing">Now Showing</a></li>
+	  </div>
+      
+  </nav>
+	  </div> 
+			 
 	  
   </header>
 	  
-  <div class="sticky">
-	  <nav class=topnav> 
-      <a href="#">About Us</a> </li>
-	  <a href="#">Prices</a> </li>      
-	  <a href="#">Now Showing</a></li>
-  </nav>
-	  </div>  
+   
 	  
   
 
 <main class="content">
-  <section>
-    
+  <section id="section-1">
+	
   </section>
 </main>
 
@@ -49,6 +57,23 @@
       </div>
       <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
   </footer>
+
+
+<script>
+
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
 
 </body>
 </html>
