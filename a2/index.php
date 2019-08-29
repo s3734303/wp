@@ -19,7 +19,7 @@
 	  <div>
 		  <div id="nav-logo" class="header">
 		<h1>Cinema</h1>
-		<a href="index.php"><img src="../media/logo.png" alt="logo" ></a>
+		<a href="index.php"><img src="../../media/logo.png" alt="logo" ></a>
 	    </div>
 		  
 		  
@@ -102,7 +102,7 @@
 	<table>
 		<tbody>
 			<tr>
-				<th scope="col"><img src="../media/topendwedding.jpg" alt=""/></th>
+				<th scope="col"><img src="../../media/topendwedding.jpg" alt=""/></th>
 				<th scope="col">
 					<h2>Top End Wedding</h2>
 					<h5>Mon - 6pm</h5>
@@ -133,7 +133,7 @@
 	<table>
 		<tbody>
 			<tr>
-				<th scope="col"><img src="../media/thehappyprince.jpg" alt=""/></th>
+				<th scope="col"><img src="../../media/thehappyprince.jpg" alt=""/></th>
 				<th scope="col">
 					<h2>The Happy Prince</h2>
 					<h5>Wed - 12pm</h5>
