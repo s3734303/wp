@@ -32,19 +32,47 @@
 	  </div>
       
   </nav>
-	  </div> 
-			 
-	  
+	  </div>   
   </header>
-	  
-   
-	  
-  
-
-<main class="content">
+<main>
   <section id="aboutus">
-	<video	width="100%" autoplay muted playsinline><source src="https://ak4.picdn.net/shutterstock/videos/1015060114/preview/stock-footage-smiling-woman-watching-movie-close-up-of-beautiful-girl-laughing-in-cinema-in-slow-motion.mp4" style="style="visibility: visible;">
+	<div class="container" class="content"><video	width="100%" autoplay muted playsinline><source src="https://ak4.picdn.net/shutterstock/videos/1015060114/preview/stock-footage-smiling-woman-watching-movie-close-up-of-beautiful-girl-laughing-in-cinema-in-slow-motion.mp4">
 	  </video>
+	  <div class="centered">
+		  <h2>CinemaHub</h2>
+		  <h1>Now Repened.</h1>
+		  <h2>We just spend a large chunk of money on renovation, come and see for yourself.</h2>
+	  </div>	
+    </div>
+	<div >
+		<h2>Seat Option: standard seat</h2>
+	</div>
+	<div class="seat">
+			<h3>&#34;I&prime;m gonna actually spending money on a movie, but the budget option will be fine&#34;, said no one ever.</h3>
+		<img src="../../media/standard.png" alt=""/>
+	</div>
+	<div>
+		<h2 >Seat Option: First Class seat</h2>
+	</div>
+	<div class="seat">
+			<h3>This one. Obviously.</h3>
+		<img src="../../media/firstclass.png" alt=""/>
+	</div>
+	
+							
+<div class="parallax container">
+	  <div class="top-left">
+	    <h2 align="left"> Now with Dolby Vision™</h3>
+	    <h5 align="left">Dolby Vision™ was designed for the cinema to deliver incredible color, a million-to-one contrast ratio, and twice the brightness of standard screens. TL;DR: It makes movies look good.</h5>
+	  </div>
+    </div>
+	<div class="container"><img src="https://www.dolby.com/uploadedImages/wwwdolbycom/Content/Platforms/Dolby_Cinema/Dolby_Cinema_Platform_Page/2_MovingAudio_TextRight_V2.jpg?resize=3240:1266" width="100%">
+	  <div class="top-right">
+		  <h2 align="right" >Enjoy new immersive experience </h2>
+		  <h5 align="right">Dolby Atmos® is an industry-leading audio technology that delivers powerful, moving audio that flows all around you. Now available in CinemaHub.
+		  </h5>
+		</div>
+    </div>
   </section>
   
 <section id="prices">
@@ -82,6 +110,7 @@
 </section>
 <section id="nowshowing">
 	<h1>Now showing</h1>
+	<div>
 	<table>
 		<tbody>
 			<tr>
@@ -89,6 +118,7 @@
 					<img src="https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="avenger"/>
 				</th>
 				<th scope="col">
+					<h6>G</h6>
 					<h2>Avenger: End Game</h2>
 					<h5>Wed - 9pm</h5>
 					<h5>Thu - 9pm</h5>
@@ -99,42 +129,51 @@
 			</tr>
 		</tbody>
 	</table>
-	<table>
-		<tbody>
-			<tr>
-				<th scope="col"><img src="../../media/topendwedding.jpg" alt=""/></th>
-				<th scope="col">
-					<h2>Top End Wedding</h2>
-					<h5>Mon - 6pm</h5>
-					<h5>Tue - 6pm</h5>
-					<h5>Sat - 3pm</h5>
-					<h5>Sun - 3pm</h5>
-                </th>
-			</tr>
-		</tbody>
-	</table>
-	<table>
-		<tbody>
-			<tr>
-				<th scope="col"><img src="https://m.media-amazon.com/images/M/MV5BNjMxMDE0MDI1Ml5BMl5BanBnXkFtZTgwMzExNTU3NjM@._V1_SY1000_CR0,0,675,1000_AL_.jpg"  alt="dumbo"/></th>
-				<th scope="col">
-					<h2>Dumbo</h2>
-					<h5>Mon - 12pm</h5>
-					<h5>Tue - 12pm</h5>
-					<h5>Wed - 6pm</h5>
-					<h5>Thu - 6pm</h5>
-					<h5>Fri - 6pm</h5>
-					<h5>Sat - 3pm</h5>
-					<h5>Sun - 3pm</h5>
-                </th>
-			</tr>
-		</tbody>
-	</table>
-	<table>
+	</div>
+<div>
+  <table>
+    <tbody>
+      <tr>
+        <th scope="col"><img src="../../media/topendwedding.jpg" alt=""/></th>
+        <th scope="col">
+          <h6>G</h6>
+          <h2>Top End Wedding</h2>
+          <h5>Mon - 6pm</h5>
+          <h5>Tue - 6pm</h5>
+          <h5>Sat - 3pm</h5>
+          <h5>Sun - 3pm</h5>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+</div>
+<div>
+  <table>
+    <tbody>
+      <tr>
+        <th scope="col"><img src="https://m.media-amazon.com/images/M/MV5BNjMxMDE0MDI1Ml5BMl5BanBnXkFtZTgwMzExNTU3NjM@._V1_SY1000_CR0,0,675,1000_AL_.jpg"  alt="dumbo"/></th>
+        <th scope="col">
+          <h6>G</h6>
+          <h2>Dumbo</h2>
+          <h5>Mon - 12pm</h5>
+          <h5>Tue - 12pm</h5>
+          <h5>Wed - 6pm</h5>
+          <h5>Thu - 6pm</h5>
+          <h5>Fri - 6pm</h5>
+          <h5>Sat - 3pm</h5>
+          <h5>Sun - 3pm</h5>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+</div>
+	<div>
+		<table>
 		<tbody>
 			<tr>
 				<th scope="col"><img src="../../media/thehappyprince.jpg" alt=""/></th>
 				<th scope="col">
+					<h6>G</h6>
 					<h2>The Happy Prince</h2>
 					<h5>Wed - 12pm</h5>
 					<h5>Thu - 12pm</h5>
@@ -144,9 +183,31 @@
                 </th>
 			</tr>
 		</tbody>
-	</table>
-	
-	
+	</table></div>	
+</section>
+<section id="synopsis">
+	<h1>Avenger: End Game&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; PG</h1>						   
+    <div>
+      
+    
+	<div  class="synopsis">
+  		<div id="#plot">
+			<h3>Plot Description:</h3>
+			<h4>After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe. </h4>
+    	</div>
+		<div id="trailer">
+			<iframe width="640" height="480" src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		</div>
+	</div>
+    <div>
+		<h2>Make a booking:</h2>
+		<button type="button">Wed-9pm</button>
+		<button type="button">Thu-9pm</button>
+		<button type="button">Fri-9pm</button>
+		<button type="button">Sat-6pm</button>
+		<button type="button">Sun-6pm</button>
+	</div>
 </section>
 </main>
 
@@ -154,7 +215,7 @@
 <script>
         document.write(new Date().getFullYear());
       </script> 
-      Put your name(s), student number(s) and group name here. Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
+      Shiou-Ping Chu s3734303 Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
       <div>
         <p>Disclaimer: This website is not a real website and is being developed as part of a Schoolof Science Web Programming course at RMIT University in Melbourne, Australia.</p>
       </div>

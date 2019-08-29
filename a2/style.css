@@ -9,21 +9,27 @@
 	display: inline-flex;
 	background-color: black;
 	padding-left: 10px;
+}
+
+#nav-logo h1{
+	margin-right: -25px;
+	position: relative;
+	bottom: 7px;
 	
 }
+
 
 
 
 #navbar {
 	overflow: hidden;
 	background-color: #0C0608;
-	
-font-family: "SF Pro Text Regular";
+	font-family: "SF-Pro-Text-Light";
+	z-index:1;
 }
 
 #navbar a {
   	float: left;
-	display: block;
 	color: #f2f2f2;
   	text-align: center;
 	padding-left: 20px;
@@ -38,15 +44,8 @@ font-family: "SF Pro Text Regular";
 }
 
 #navbar a:hover {
-  background-color: #ddd;
-  color: black;
+  color: #63636e;
 }
-
-
-.content {
-  padding: 16px;
-}
-
 .sticky {
   position: fixed;
   top: 0;
@@ -56,6 +55,10 @@ font-family: "SF Pro Text Regular";
 .sticky + .content {
   padding-top: 60px;
 }
+
+.content {
+}
+
 
 html {
     -ms-text-size-adjust: 100%;
@@ -68,6 +71,7 @@ body {
     padding:0;
 	background-color: #17171d;
 	color: whitesmoke;
+	font-family: "SF-Pro-Text-Regular";
 	
 }
 section {
@@ -75,16 +79,16 @@ section {
 }
 table {
     border-collapse: collapse;
-    border-spacing:0;
+    border-spacing:10px;
 	background-color: #3F3F3F;
-
+	
 }
 
 th, td {	
 	font-size: 20px;
 	padding: 8px;
 	text-align: left;
-	border-bottom: 1px solid #ddd;
+	
 }
 
 
@@ -92,12 +96,14 @@ th, td {
 #nowshowing {
 	align-items: flex-start;
 	border: medium;
-	width: 600px;
+	width: 650px;
 	align-self: auto;
+	padding: 10px;	
 }
 #nowshowing img{
 	float: left;
 	width: 300px;
+	
 	
 }
 
@@ -106,18 +112,24 @@ th, td {
 	text-align: left;
 }
 
-#nowshowing table{
-	
+#nowshowing table{	
 	table-layout : fixed;
 	border-bottom-width:thick;
 	border-bottom-color: black;
-	width: 600px;
-	
-	
+	width: 650px;
 }
+#nowshowing  h6{
+	float:right;
+	font-size: 28px;
+	margin-top: -88px;
+	color: #D8D8D8;
+}
+
+
 #nowshowing  h2{
 	float: center;
 	text-align: center;
+	margin-top: -50px;
 }
 
 #nowshowing  h5{
@@ -139,6 +151,110 @@ th, td {
   padding: 20px;
   font-size: 20px;
   text-align: center;
+}
+@font-face{
+	font-family:"SF-Pro-Text-Regular";
+	src: url("../../webfonts/SF-Pro-Text-Regular.otf");
+}
+@font-face{
+	font-family:"SF-Pro-Text-Light";
+	src: url("../../webfonts/SF-Pro-Text-Light.otf");
+}
+
+@font-face{
+	font-family:"SF-Pro-Text-Heavy";
+	src: url("../../webfonts/SF-Pro-Text-Heavy.otf");
+}
+@font-face{
+	font-family:"SF-Pro-Text-Semibold";
+	src: url("../../webfonts/SF-Pro-Text-Semibold.otf");
+}
+.parallax { 
+  /* The image used */
+	background-image: url(https://www.dolby.com/uploadedImages/wwwdolbycom/Content/Homepage/dolby-cinema-homepage-3240x1226.jpg);
+	
+
+  /* Set a specific height */
+  height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container {
+  position: relative;
+  text-align: center;
+}
+.top-left {
+	position: absolute;
+	top: 50px;
+	left: 16px;
+	width: 400px;
+	text-align: left;	
+}
+.top-right {
+	position: absolute;
+	top: 50px;
+	right: 16px;
+	width: 600px;
+	text-align: left;	
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#prices {
+	padding: 10px;
+}
+
+#aboutus h1{
+	font-size: 64px;
+	font-family: "SF-Pro-Text-Heavy";
+	width: 600px;
+	text-align: center;
+	margin-bottom: -10px;
+	margin-top: 4px;
+}
+#aboutus h2{
+	font-size: 24px;
+	width: 600px;
+	font-family: "SF-Pro-Text-Semibold";
+	color: #D8D8D8;
+}
+
+#aboutus h5{
+	font-size: 18px;
+}
+
+.seat {
+	padding: 16px;
+	display: inline-flex;
+		
+}
+.seat h3 {
+	width: 400px;
+}
+#synopsis{
+	background-color: #262626;
+	padding: 40px;
+}
+.synopsis{
+	
+	display: inline-flex;
+	
+}
+#plot{
+	width: 400px;
+
+}
+#synopsistitle h2{
+	float: right;
 }
 
 
