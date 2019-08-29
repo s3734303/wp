@@ -1,38 +1,40 @@
 .header {
-  background-color: #f1f1f1;
-  padding: 30px;
-  text-align: center;
+	background-color: #262626;
+	text-align: center;
+	font-size: 25px;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
 }
-
-
-
 #nav-logo {
 	width: 100%;
 	display: inline-flex;
-	background-color: white;
+	background-color: black;
+	padding-left: 10px;
 	
 }
 
 
 
-#section-1 {
-	height: 1000px;
-}
-
-
 #navbar {
-  overflow: hidden;
-  background-color: #333;
+	overflow: hidden;
+	background-color: #0C0608;
+	
+font-family: "SF Pro Text Regular";
 }
 
 #navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+  	float: left;
+	display: block;
+	color: #f2f2f2;
+  	text-align: center;
+	padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  	text-decoration: none;
+  	font-size: 17px;
+	font-weight: 400;
+	display: inline-block;
+	
 }
 
 #navbar a:hover {
@@ -40,10 +42,6 @@
   color: black;
 }
 
-#navbar a.active {
-  background-color: #4CAF50;
-  color: white;
-}
 
 .content {
   padding: 16px;
@@ -59,7 +57,88 @@
   padding-top: 60px;
 }
 
-.logo {
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust:100%;
+	
+}
+
+body {
+    margin: 0;
+    padding:0;
+	background-color: #17171d;
+	color: whitesmoke;
+	
+}
+section {
+	min-height: 100%;
+}
+table {
+    border-collapse: collapse;
+    border-spacing:0;
+	background-color: #3F3F3F;
 
 }
+
+th, td {	
+	font-size: 20px;
+	padding: 8px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+
+
+#nowshowing {
+	align-items: flex-start;
+	border: medium;
+	width: 600px;
+	align-self: auto;
+}
+#nowshowing img{
+	float: left;
+	width: 300px;
+	
+}
+
+
+#title {
+	text-align: left;
+}
+
+#nowshowing table{
+	
+	table-layout : fixed;
+	border-bottom-width:thick;
+	border-bottom-color: black;
+	width: 600px;
+	
+	
+}
+#nowshowing  h2{
+	float: center;
+	text-align: center;
+}
+
+#nowshowing  h5{
+
+	text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 10px;
+}
+
+
+
+.grid-item {
+  background-color:#262626;
+  
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
 
