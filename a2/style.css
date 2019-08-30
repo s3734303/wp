@@ -77,33 +77,37 @@ body {
 section {
 	min-height: 100%;
 }
-table {
-    border-collapse: collapse;
-    border-spacing:10px;
-	background-color: #3F3F3F;
-	
-}
 
-th, td {	
-	font-size: 20px;
-	padding: 8px;
-	text-align: left;
-	
-}
 
 
 
 #nowshowing {
+	padding: 10px;	
+	
+}
+.postblock{
 	align-items: flex-start;
 	border: medium;
-	width: 650px;
 	align-self: auto;
-	padding: 10px;	
+	height: 500px;
+	display: inline-block;
+	background-color: #3F3F3F;
 }
-#nowshowing img{
-	float: left;
-	width: 300px;
+
+.fixsize{
+	display: inline-block;
 	
+}
+.timetable{
+	display: inline-block;
+	width: 300px;
+	position: relative;
+	bottom:70px
+	
+}
+
+.postblock img{
+	width: 300px;
 	
 }
 
@@ -112,24 +116,24 @@ th, td {
 	text-align: left;
 }
 
-#nowshowing table{	
-	table-layout : fixed;
-	border-bottom-width:thick;
-	border-bottom-color: black;
-	width: 650px;
-}
+
 #nowshowing  h6{
-	float:right;
-	font-size: 28px;
-	margin-top: -88px;
+	
 	color: #D8D8D8;
 }
 
 
 #nowshowing  h2{
-	float: center;
 	text-align: center;
-	margin-top: -50px;
+
+}
+#nowshowing  h4{
+	text-align: right;
+	position: relative;
+	top: 280px;
+	right: 30px;
+	font-size: 25px;
+
 }
 
 #nowshowing  h5{
@@ -239,6 +243,9 @@ th, td {
 }
 .seat h3 {
 	width: 400px;
+}
+#chair img {
+	width: 300px;
 }
 #synopsis{
 	background-color: #262626;

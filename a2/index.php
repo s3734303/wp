@@ -47,17 +47,20 @@
 	<div >
 		<h2>Seat Option: standard seat</h2>
 	</div>
-	<div class="seat">
+	<div id="chair">
+		<div>
 			<h3>&#34;I&prime;m gonna actually spending money on a movie, but the budget option will be fine&#34;, said no one ever.</h3>
 		<img src="../../media/standard.png" alt=""/>
 	</div>
 	<div>
 		<h2 >Seat Option: First Class seat</h2>
 	</div>
-	<div class="seat">
+	<div>
 			<h3>This one. Obviously.</h3>
 		<img src="../../media/firstclass.png" alt=""/>
+	</div>				   
 	</div>
+	
 	
 							
 <div class="parallax container">
@@ -109,52 +112,38 @@
   </div>
 </section>
 <section id="nowshowing">
-	<h1>Now showing</h1>
-	<div>
-	<table>
-		<tbody>
-			<tr>
-				<th scope="col">
-					<img src="https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="avenger"/>
-				</th>
-				<th scope="col">
-					<h6>G</h6>
-					<h2>Avenger: End Game</h2>
-					<h5>Wed - 9pm</h5>
-					<h5>Thu - 9pm</h5>
-					<h5>Fri - 9pm</h5>
-					<h5>Sat - 6pm</h5>
-					<h5>Sun - 6pm</h5>		
-			  </th>
-			</tr>
-		</tbody>
-	</table>
+	<div><h1>Now showing</h1></div>
+<div class="postblock">
+	  <div class="fixsize"><img src="../../media/avenger.jpg" alt="avenger"/></div>
+	  <div class="timetable">
+			<h2>Avenger: End Game</h2>
+			<h4>G</h4>
+			<h5>Wed - 9pm</h5>
+			<h5>Thu - 9pm</h5>
+			<h5>Fri - 9pm</h5>
+			<h5>Sat - 6pm</h5>
+			<h5>Sun - 6pm</h5>
+			
+		</div>
+    </div>
+<div class="postblock">
+	<div class="fixsize"><img src="../../media/topendwedding.jpg" alt=""/></div>
+	<div class="timetable">
+        <h2>Top End Wedding</h2>
+		<h4>G</h4>
+        <h5>Mon - 6pm</h5>
+        <h5>Tue - 6pm</h5>
+        <h5>Sat - 3pm</h5>
+        <h5>Sun - 3pm</h5>
+					  
 	</div>
-<div>
-  <table>
-    <tbody>
-      <tr>
-        <th scope="col"><img src="../../media/topendwedding.jpg" alt=""/></th>
-        <th scope="col">
-          <h6>G</h6>
-          <h2>Top End Wedding</h2>
-          <h5>Mon - 6pm</h5>
-          <h5>Tue - 6pm</h5>
-          <h5>Sat - 3pm</h5>
-          <h5>Sun - 3pm</h5>
-          </th>
-        </tr>
-      </tbody>
-    </table>
 </div>
-<div>
-  <table>
-    <tbody>
-      <tr>
-        <th scope="col"><img src="https://m.media-amazon.com/images/M/MV5BNjMxMDE0MDI1Ml5BMl5BanBnXkFtZTgwMzExNTU3NjM@._V1_SY1000_CR0,0,675,1000_AL_.jpg"  alt="dumbo"/></th>
-        <th scope="col">
-          <h6>G</h6>
+														
+<div class="postblock">
+	<div class="fixsize"><img src="../../media/dumbo.jpg"  alt="dumbo"/></div>
+	<div class="timetable">
           <h2>Dumbo</h2>
+			<h4>G</h4>
           <h5>Mon - 12pm</h5>
           <h5>Tue - 12pm</h5>
           <h5>Wed - 6pm</h5>
@@ -162,28 +151,22 @@
           <h5>Fri - 6pm</h5>
           <h5>Sat - 3pm</h5>
           <h5>Sun - 3pm</h5>
-          </th>
-        </tr>
-      </tbody>
-    </table>
+		  </div>
 </div>
-	<div>
-		<table>
-		<tbody>
-			<tr>
-				<th scope="col"><img src="../../media/thehappyprince.jpg" alt=""/></th>
-				<th scope="col">
-					<h6>G</h6>
-					<h2>The Happy Prince</h2>
-					<h5>Wed - 12pm</h5>
-					<h5>Thu - 12pm</h5>
-					<h5>Fri - 12pm</h5>
-					<h5>Sat - 9pm</h5>
-					<h5>Sun - 9pm</h5>
-                </th>
-			</tr>
-		</tbody>
-	</table></div>	
+	<div class="postblock">
+		<div class="fixsize"><img src="../../media/thehappyprince.jpg" alt=""/></div>
+	  <div class="timetable">
+				<h2>The Happy Prince</h2>
+				<h4>G</h4>
+				<h5>Wed - 12pm</h5>
+				<h5>Thu - 12pm</h5>
+				<h5>Fri - 12pm</h5>
+				<h5>Sat - 9pm</h5>
+				<h5>Sun - 9pm</h5>
+				
+
+	</div>
+</div>	
 </section>
 <section id="synopsis">
 	<h1>Avenger: End Game&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; PG</h1>						   
