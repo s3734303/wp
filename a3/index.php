@@ -4,17 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible">
-    <title>Assignment 2</title>
+    <title>Assignment 3</title>
     <!-- Keep wireframe.css for debugging, add your css to style.css -->
    <!--<link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>	-->
     <link id='stylecss' type="text/css" rel="stylesheet" href="style.css">
-	  
-<script src='../wireframe.js'></script>
-	  <script src='javascript.js'></script>
+	<link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
+	<script src='../wireframe.js'></script>
+	
+	
   </head>
 
   <body  style="background-color: "#F2F2F2">
-
+	
   <header>
 	  <div>
 		  <div id="nav-logo" class="header">
@@ -26,9 +27,9 @@
 		  
 	  <nav> 
 		  <div id="navbar">
-		 	 <a href="#aboutus" class="active">About Us</a> </li>
-	  		<a href="#prices">Prices</a> </li>      
-	 		<a href="#nowshowing">Now Showing</a></li>
+		 	 <a href="#aboutus" 	class="navlink">About Us</a> </li>
+	  		<a href="#prices" 		class="navlink">Prices</a> </li>      
+	 		<a href="#nowshowing" 	class="navlink">Now Showing</a></li>
 	  </div>
       
   </nav>
@@ -113,7 +114,7 @@
 </section>
 <section id="nowshowing">
 	<div><h1>Now showing</h1></div>
-<div class="postblock">
+<div class="postblock" id="ACT" onclick="showsynopsis(this.id)">
 	  <div class="fixsize"><img src="../../media/avenger.jpg" alt="avenger"/></div>
 	  <div class="timetable">
 			<h2>Avenger: End Game</h2>
@@ -126,7 +127,7 @@
 			
 		</div>
     </div>
-<div class="postblock">
+<div class="postblock" id="RMC" onclick="showsynopsis(this.id)">
 	<div class="fixsize"><img src="../../media/topendwedding.jpg" alt=""/></div>
 	<div class="timetable">
         <h2>Top End Wedding</h2>
@@ -139,7 +140,7 @@
 	</div>
 </div>
 														
-<div class="postblock">
+<div class="postblock" id="ANM" onclick="showsynopsis(this.id)">
 	<div class="fixsize"><img src="../../media/dumbo.jpg"  alt="dumbo"/></div>
 	<div class="timetable">
           <h2>Dumbo</h2>
@@ -153,7 +154,7 @@
           <h5>Sun - 3pm</h5>
 		  </div>
 </div>
-	<div class="postblock">
+	<div class="postblock" id="AHF" onclick="showsynopsis(this.id)">
 		<div class="fixsize"><img src="../../media/thehappyprince.jpg" alt=""/></div>
 	  <div class="timetable">
 				<h2>The Happy Prince</h2>
@@ -168,28 +169,191 @@
 	</div>
 </div>	
 </section>
-<section id="synopsis">
-	<h1>Avenger: End Game&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; PG</h1>						   
+<section id="synopsis" >
+	<div id="ACT" class="synopsis-block">
+	<div>
+		<h1>Avenger: End Game&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; PG</h1>						   
     <div>
       
     
 	<div  class="synopsis">
-  		<div id="#plot">
+  		<div>
 			<h3>Plot Description:</h3>
 			<h4>After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe. </h4>
     	</div>
-		<div id="trailer">
+		<div class="trailer">
 			<iframe width="640" height="480" src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 		</div>
+	</div>   
+	</div>			 
 	</div>
+	<div id="RMC" class="synopsis-block">
+	<div>
+		<h1>Top End Wedding&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; M</h1>						   
     <div>
+      
+    
+	<div  class="synopsis">
+  		<div>
+			<h3>Plot Description:</h3>
+			<h4>Lauren and Ned are engaged, they are in love, and they have just ten days to find Lauren's mother who has gone AWOL somewhere in the remote far north of Australia, reunite her parents and pull off their dream wedding.</h4>
+    	</div>
+		<div class="trailer">
+			<iframe width="640" height="480" src="https://www.youtube.com/embed/uoDBvGF9pPU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		</div>
+	</div>   
+	</div>			 
+	</div>
+	<div id="ANM" class="synopsis-block">
+	<div>
+		<h1>Dumbo&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; PG</h1>						   
+    <div>
+      
+    
+	<div  class="synopsis">
+  		<div>
+			<h3>Plot Description:</h3>
+			<h4>A young elephant, whose oversized ears enable him to fly, helps save a struggling circus, but when the circus plans a new venture, Dumbo and his friends discover dark secrets beneath its shiny veneer.</h4>
+    	</div>
+		<div class="trailer">
+			<iframe width="640" height="480" src="https://www.youtube.com/embed/7NiYVoqBt-8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		</div>
+	</div>   
+	</div>			 
+	</div>
+	<div id="AHF" class="synopsis-block">
+	<div>
+		<h1>The Happy Prince&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; PG</h1>						   
+    <div>
+      
+    
+	<div  class="synopsis">
+  		<div>
+			<h3>Plot Description:</h3>
+			<h4>The untold story of the last days in the tragic times of Oscar Wilde, a person who observes his own failure with ironic distance and regards the difficulties that beset his life with detachment and humor.</h4>
+    	</div>
+		<div class="trailer">
+			<iframe width="640" height="480" src="https://www.youtube.com/embed/tXANCJQkUIE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		</div>
+	</div>   
+	</div>			 
+	</div>
+<div id="booking">
 		<h2>Make a booking:</h2>
-		<button type="button">Wed-9pm</button>
-		<button type="button">Thu-9pm</button>
-		<button type="button">Fri-9pm</button>
-		<button type="button">Sat-6pm</button>
-		<button type="button">Sun-6pm</button>
+		<form action="/lunardo.">
+		  <div class="bookingblock">
+			<div class="seatblock">
+			Standard
+			  <div>
+				Adult
+				<select name="seats[STA]" form="booking">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>				 
+				<option value="7">7</option>				 
+				<option value="8">8</option>				 
+				<option value="9">9</option>				 
+				<option value="10">10</option>				 
+			</select>
+			  </div>				
+			<div>
+				Concession
+				<select name="seats[STP]" form="booking">
+			  	<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>				 
+				<option value="7">7</option>				 
+				<option value="8">8</option>				 
+				<option value="9">9</option>				 
+				<option value="10">10</option>				 
+		  	</select>
+			  </div>
+			<div>
+				Children
+				<select name="seats[STC]" form="booking">
+			  	<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>				 
+				<option value="7">7</option>				 
+				<option value="8">8</option>				 
+				<option value="9">9</option>				 
+				<option value="10">10</option>				 
+			</select>	
+			</div>
+          </div>
+		  		<div class="seatblock">
+				First Class
+				  <div>
+					Adult 
+					<select name="seats[FCA]" form="booking">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>				 
+					<option value="7">7</option>				 
+					<option value="8">8</option>				 
+					<option value="9">9</option>				 
+					<option value="10">10</option>				 
+					</select>
+				  </div>
+				  <div>
+					Concession
+					<select name="seats[FCP]" form="booking">
+			 		<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>				 
+					<option value="7">7</option>				 
+					<option value="8">8</option>				 
+					<option value="9">9</option>				 
+					<option value="10">10</option>				 
+					</select>
+				  </div>
+				  <div>
+					Children				  
+					<select name="seats[FCC]" form="booking">
+			  		<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>				 
+					<option value="7">7</option>				 
+					<option value="8">8</option>				 
+					<option value="9">9</option>				 
+					<option value="10">10</option>				 
+					</select>
+				  </div>
+          </div>					   
+			</div>
+		  <div class="bookingblock">
+			<div>Name			<input type="text" 		name="cust[name]	"></div>
+			<div>Email			<input type="email"		name="cust[email]	"></div>
+			<div>Mobile			<input type="tel"		name="cust[mobile]	"></div>	
+			<div>Credit Card	<input type="text" 		name="cust[card]	"></div>
+			<div>Expiry			<input type="month"		name="cust[expiry]	"></div>												 </div>
+			<div>
+					Order<input type="submit"	name="order			">
+				</div>
+															 
+        </form>			
 	</div>
 </section>
 </main>
@@ -204,23 +368,6 @@
       </div>
       <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
   </footer>
-
-
-<script>
-
-
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
-</script>
-
-
 </body>
+<script src='javascript.js'></script>
 </html>

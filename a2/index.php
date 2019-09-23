@@ -10,7 +10,7 @@
     <link id='stylecss' type="text/css" rel="stylesheet" href="style.css">
 	  
 <script src='../wireframe.js'></script>
-	  <script src='javascript.js'></script>
+	 
   </head>
 
   <body  style="background-color: "#F2F2F2">
@@ -206,20 +206,7 @@
   </footer>
 
 
-<script>
-
-
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
-</script>
+ <script src='javascript.js'></script>
 
 
 </body>

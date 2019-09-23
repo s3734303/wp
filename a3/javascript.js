@@ -15,3 +15,30 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+
+//bottom
+var link = navbar.getElementsByClassName("navlink");
+for (var i = 0; i < link.length; i++) {
+  link[i].addEventListener("click", function() {
+
+  var current = document.getElementsByClassName("active");
+  if (current.length > 0) { 
+    current[0].className = current[0].className.replace(" active", "");
+  }
+  this.className += " active";
+  });
+}
+
+var synopsis =  document.getElementsByClassName("synopsis-block");
+document.getElementById("booking").style.display = "none";
+for(var k=0;k<synopsis.length;k++){
+		synopsis[k].style.display = "none";
+	}
+function showsynopsis(movie_id){
+	document.getElementById("booking").style.display = "initial";
+	for(var k=0;k<synopsis.length;k++){
+		synopsis[k].style.display = "none";
+	}
+	
+		synopsis[movie_id].style.display = "initial";
+}
