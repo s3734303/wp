@@ -117,7 +117,7 @@
 	  <div class="fixsize"><img src="../../media/avenger.jpg" alt="avenger"/></div>
 	  <div class="timetable">
 			<h2>Avenger: End Game</h2>
-			<h4>G</h4>
+			<h4>PG</h4>
 			<h5>Wed - 9pm</h5>
 			<h5>Thu - 9pm</h5>
 			<h5>Fri - 9pm</h5>
@@ -130,7 +130,7 @@
 	<div class="fixsize"><img src="../../media/topendwedding.jpg" alt=""/></div>
 	<div class="timetable">
         <h2>Top End Wedding</h2>
-		<h4>G</h4>
+		<h4>M</h4>
         <h5>Mon - 6pm</h5>
         <h5>Tue - 6pm</h5>
         <h5>Sat - 3pm</h5>
@@ -143,7 +143,7 @@
 	<div class="fixsize"><img src="../../media/dumbo.jpg"  alt="dumbo"/></div>
 	<div class="timetable">
           <h2>Dumbo</h2>
-			<h4>G</h4>
+			<h4>PG</h4>
           <h5>Mon - 12pm</h5>
           <h5>Tue - 12pm</h5>
           <h5>Wed - 6pm</h5>
@@ -157,7 +157,7 @@
 		<div class="fixsize"><img src="../../media/thehappyprince.jpg" alt=""/></div>
 	  <div class="timetable">
 				<h2>The Happy Prince</h2>
-				<h4>G</h4>
+				<h4>R</h4>
 				<h5>Wed - 12pm</h5>
 				<h5>Thu - 12pm</h5>
 				<h5>Fri - 12pm</h5>

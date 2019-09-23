@@ -28,17 +28,35 @@ for (var i = 0; i < link.length; i++) {
   this.className += " active";
   });
 }
-
+var booktime = document.getElementById("time");
+var bookbutton = booktime.getElementsByTagName("button");
 var synopsis =  document.getElementsByClassName("synopsis-block");
 document.getElementById("booking").style.display = "none";
 for(var k=0;k<synopsis.length;k++){
 		synopsis[k].style.display = "none";
 	}
+for(var l=0;l<bookbutton.length;l++){
+	bookbutton[l].style.display = "none";
+}
 function showsynopsis(movie_id){
-	document.getElementById("booking").style.display = "initial";
+	for(var l=0;l<bookbutton.length;l++){
+	bookbutton[l].style.display = "none";
+}
 	for(var k=0;k<synopsis.length;k++){
 		synopsis[k].style.display = "none";
 	}
 	
-		synopsis[movie_id].style.display = "initial";
+	synopsis[movie_id].style.display = "initial";
+	for(l=0;l<bookbutton.length;l++){
+	if(bookbutton[l].id==movie_id){
+		bookbutton[l].style.display = "initial";
+		}
+	}
+	bookbutton[l].style.display = "none";
+}
+function showbooking(movieid, day ,hour){
+	document.getElementById("booking").style.display = "initial";
+	document.getElementById("movie-id").value=movieid;
+	document.getElementById("movie-day").value=day;
+	document.getElementById("movie-hour").value=hour;
 }

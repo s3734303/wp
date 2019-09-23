@@ -114,11 +114,11 @@
 </section>
 <section id="nowshowing">
 	<div><h1>Now showing</h1></div>
-<div class="postblock" id="ACT" onclick="showsynopsis(this.id)">
+<div class="postblock" id="ACT" onclick="showsynopsis(this.id)" >
 	  <div class="fixsize"><img src="../../media/avenger.jpg" alt="avenger"/></div>
 	  <div class="timetable">
 			<h2>Avenger: End Game</h2>
-			<h4>G</h4>
+			<h4>PG</h4>
 			<h5>Wed - 9pm</h5>
 			<h5>Thu - 9pm</h5>
 			<h5>Fri - 9pm</h5>
@@ -131,7 +131,7 @@
 	<div class="fixsize"><img src="../../media/topendwedding.jpg" alt=""/></div>
 	<div class="timetable">
         <h2>Top End Wedding</h2>
-		<h4>G</h4>
+		<h4>M</h4>
         <h5>Mon - 6pm</h5>
         <h5>Tue - 6pm</h5>
         <h5>Sat - 3pm</h5>
@@ -144,7 +144,7 @@
 	<div class="fixsize"><img src="../../media/dumbo.jpg"  alt="dumbo"/></div>
 	<div class="timetable">
           <h2>Dumbo</h2>
-			<h4>G</h4>
+			<h4>PG</h4>
           <h5>Mon - 12pm</h5>
           <h5>Tue - 12pm</h5>
           <h5>Wed - 6pm</h5>
@@ -158,7 +158,7 @@
 		<div class="fixsize"><img src="../../media/thehappyprince.jpg" alt=""/></div>
 	  <div class="timetable">
 				<h2>The Happy Prince</h2>
-				<h4>G</h4>
+				<h4>R</h4>
 				<h5>Wed - 12pm</h5>
 				<h5>Thu - 12pm</h5>
 				<h5>Fri - 12pm</h5>
@@ -181,12 +181,12 @@
 			<h3>Plot Description:</h3>
 			<h4>After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe. </h4>
     	</div>
-		<div class="trailer">
+		<div id="MoviePanelACT">
 			<iframe width="640" height="480" src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 		</div>
 	</div>   
-	</div>			 
+	</div>
 	</div>
 	<div id="RMC" class="synopsis-block">
 	<div>
@@ -199,7 +199,7 @@
 			<h3>Plot Description:</h3>
 			<h4>Lauren and Ned are engaged, they are in love, and they have just ten days to find Lauren's mother who has gone AWOL somewhere in the remote far north of Australia, reunite her parents and pull off their dream wedding.</h4>
     	</div>
-		<div class="trailer">
+		<div id="MoviePanelRMC">
 			<iframe width="640" height="480" src="https://www.youtube.com/embed/uoDBvGF9pPU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 		</div>
@@ -217,7 +217,7 @@
 			<h3>Plot Description:</h3>
 			<h4>A young elephant, whose oversized ears enable him to fly, helps save a struggling circus, but when the circus plans a new venture, Dumbo and his friends discover dark secrets beneath its shiny veneer.</h4>
     	</div>
-		<div class="trailer">
+		<div id="MoviePanelANM">
 			<iframe width="640" height="480" src="https://www.youtube.com/embed/7NiYVoqBt-8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 		</div>
@@ -226,7 +226,7 @@
 	</div>
 	<div id="AHF" class="synopsis-block">
 	<div>
-		<h1>The Happy Prince&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; PG</h1>						   
+		<h1>The Happy Prince&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; R</h1>						   
     <div>
       
     
@@ -235,22 +235,45 @@
 			<h3>Plot Description:</h3>
 			<h4>The untold story of the last days in the tragic times of Oscar Wilde, a person who observes his own failure with ironic distance and regards the difficulties that beset his life with detachment and humor.</h4>
     	</div>
-		<div class="trailer">
+		<div id="MoviePanelAHF">
 			<iframe width="640" height="480" src="https://www.youtube.com/embed/tXANCJQkUIE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 		</div>
 	</div>   
-	</div>			 
+	</div>	
 	</div>
-<div id="booking">
-		<h2>Make a booking:</h2>
-		<form action="/lunardo.">
+	<div id="time">
+		<button type="button" onclick="showbooking(this.id,'MON','T18')" id="RMC">Mon-6pm</button>
+		<button type="button" onclick="showbooking(this.id,'MON','T12')" id="ANM">Mon-12pm</button>
+		<button type="button" onclick="showbooking(this.id,'TUE','T18')" id="RMC">Tue-6pm</button>	
+		<button type="button" onclick="showbooking(this.id,'TUE','T12')" id="ANM">Tue-12pm</button>
+		<button type="button" onclick="showbooking(this.id,'WED','T21')" id="ACT">Wed-9pm</button>
+		<button type="button" onclick="showbooking(this.id,'WED','T18')" id="ANM">Wed-6pm</button>
+		<button type="button" onclick="showbooking(this.id,'WED','T12')" id="AHF">Wed-12pm</button>			
+		<button type="button" onclick="showbooking(this.id,'THU','T21')" id="ACT">Thu-9pm</button>
+		<button type="button" onclick="showbooking(this.id,'THU','T18')" id="ANM">Thu-6pm</button>
+		<button type="button" onclick="showbooking(this.id,'THU','T12')" id="AHF">Thu-12pm</button>			
+		<button type="button" onclick="showbooking(this.id,'FRI','T21')" id="ACT">Fri-9pm</button>
+		<button type="button" onclick="showbooking(this.id,'FRI','T18')" id="ANM">Fri-6pm</button>
+		<button type="button" onclick="showbooking(this.id,'FRI','T12')" id="AHF">Fri-12pm</button>			
+		<button type="button" onclick="showbooking(this.id,'SAT','T18')" id="ACT">Sat-6pm</button>
+		<button type="button" onclick="showbooking(this.id,'SAT','T15')" id="RMC">Sat-3pm</button>
+		<button type="button" onclick="showbooking(this.id,'SAT','T12')" id="ANM">Sat-12pm</button>
+		<button type="button" onclick="showbooking(this.id,'SAT','T21')" id="AHF">Sat-9pm</button>				
+		<button type="button" onclick="showbooking(this.id,'SUN','T18')" id="ACT">Sun-6pm</button>
+		<button type="button" onclick="showbooking(this.id,'SUN','T15')" id="RMC">Sun-3pm</button>	
+		<button type="button" onclick="showbooking(this.id,'SUN','T12')" id="ANM">Sun-12pm</button>
+		<button type="button" onclick="showbooking(this.id,'SUN','T21')" id="AHF">Sun-9pm</button>											 
+	</div>
+<div>
+		<form action="/lunardo-formtest.php" method="get" id="booking">
 		  <div class="bookingblock">
 			<div class="seatblock">
 			Standard
 			  <div>
 				Adult
 				<select name="seats[STA]" form="booking">
+				<option value=''>Blank</option>											
 				<option value="1">1</option>
 				<option value="2">2</option>
 				<option value="3">3</option>
@@ -266,6 +289,7 @@
 			<div>
 				Concession
 				<select name="seats[STP]" form="booking">
+				<option value=''>Blank</option>											
 			  	<option value="1">1</option>
 				<option value="2">2</option>
 				<option value="3">3</option>
@@ -281,6 +305,7 @@
 			<div>
 				Children
 				<select name="seats[STC]" form="booking">
+				<option value=''>Blank</option>											
 			  	<option value="1">1</option>
 				<option value="2">2</option>
 				<option value="3">3</option>
@@ -299,6 +324,7 @@
 				  <div>
 					Adult 
 					<select name="seats[FCA]" form="booking">
+					<option value=''>Blank</option>											
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -314,6 +340,7 @@
 				  <div>
 					Concession
 					<select name="seats[FCP]" form="booking">
+					<option value=''>Blank</option>										
 			 		<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -329,6 +356,7 @@
 				  <div>
 					Children				  
 					<select name="seats[FCC]" form="booking">
+					<option value=''>Blank</option>										
 			  		<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -344,11 +372,14 @@
           </div>					   
 			</div>
 		  <div class="bookingblock">
-			<div>Name			<input type="text" 		name="cust[name]	"></div>
-			<div>Email			<input type="email"		name="cust[email]	"></div>
-			<div>Mobile			<input type="tel"		name="cust[mobile]	"></div>	
-			<div>Credit Card	<input type="text" 		name="cust[card]	"></div>
-			<div>Expiry			<input type="month"		name="cust[expiry]	"></div>												 </div>
+			<input type="hidden"	id="movie-id"	name="movie[id]" 	value=''>
+			<input type="hidden"	id="movie-day"	name="movie[day]" 	value=''>
+			<input type="hidden"	id="movie-hour"	name="movie[hour]"	value=''>										
+			<div>Name			<input type="text" 		name='cust[name]'	></div>
+			<div>Email			<input type="email"		name='cust[email]'	></div>
+			<div>Mobile			<input type="tel"		name='cust[mobile]'	></div>	
+			<div>Credit Card	<input type="text" 		name='cust[card]'	></div>
+			<div>Expiry			<input type="month"		name='cust[expiry]'	></div>												 </div>
 			<div>
 					Order<input type="submit"	name="order			">
 				</div>
