@@ -171,13 +171,9 @@
 </section>
 <section id="synopsis" >
 	<div id="ACT" class="synopsis-block">
-	<div>
-		<h1>Avenger: End Game&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; PG</h1>						   
-    <div>
-      
-    
 	<div  class="synopsis">
   		<div>
+			<h1>Avenger: End Game&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; PG</h1>		
 			<h3>Plot Description:</h3>
 			<h4>After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe. </h4>
     	</div>
@@ -185,62 +181,42 @@
 			<iframe width="640" height="480" src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 		</div>
-	</div>   
-	</div>
 	</div>
 	<div id="RMC" class="synopsis-block">
-	<div>
-		<h1>Top End Wedding&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; M</h1>						   
-    <div>
-      
-    
 	<div  class="synopsis">
   		<div>
+			<h1>Top End Wedding&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; M</h1>	
 			<h3>Plot Description:</h3>
 			<h4>Lauren and Ned are engaged, they are in love, and they have just ten days to find Lauren's mother who has gone AWOL somewhere in the remote far north of Australia, reunite her parents and pull off their dream wedding.</h4>
     	</div>
 		<div id="MoviePanelRMC">
 			<iframe width="640" height="480" src="https://www.youtube.com/embed/uoDBvGF9pPU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
-		</div>
-	</div>   
-	</div>			 
+		</div>		 
 	</div>
 	<div id="ANM" class="synopsis-block">
-	<div>
-		<h1>Dumbo&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; PG</h1>						   
-    <div>
-      
-    
 	<div  class="synopsis">
   		<div>
+			<h1>Dumbo&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; PG</h1>
 			<h3>Plot Description:</h3>
 			<h4>A young elephant, whose oversized ears enable him to fly, helps save a struggling circus, but when the circus plans a new venture, Dumbo and his friends discover dark secrets beneath its shiny veneer.</h4>
     	</div>
 		<div id="MoviePanelANM">
 			<iframe width="640" height="480" src="https://www.youtube.com/embed/7NiYVoqBt-8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
-		</div>
-	</div>   
-	</div>			 
+		</div>			 
 	</div>
 	<div id="AHF" class="synopsis-block">
-	<div>
-		<h1>The Happy Prince&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; R</h1>						   
-    <div>
-      
-    
-	<div  class="synopsis">
+	<div  class="synopsis">		  
   		<div>
+			<h1>The Happy Prince&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; R</h1>
 			<h3>Plot Description:</h3>
 			<h4>The untold story of the last days in the tragic times of Oscar Wilde, a person who observes his own failure with ironic distance and regards the difficulties that beset his life with detachment and humor.</h4>
     	</div>
 		<div id="MoviePanelAHF">
 			<iframe width="640" height="480" src="https://www.youtube.com/embed/tXANCJQkUIE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
-		</div>
-	</div>   
-	</div>	
+		</div>	
 	</div>
 	<div id="time">
 		<button type="button" onclick="showbooking(this.id,'MON','T18')" id="RMC">Mon-6pm</button>
@@ -266,14 +242,16 @@
 		<button type="button" onclick="showbooking(this.id,'SUN','T21')" id="AHF">Sun-9pm</button>											 
 	</div>
 <div>
-		<form action="/lunardo-formtest.php" method="get" id="booking">
-		  <div class="bookingblock">
-			<div class="seatblock">
+		
+		<form method="post" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" id="booking" name="bookingform" onsubmit="return formValidation()">
+		<div><h3 class="movieselect" id="movie-title"></h3><h3 class="movieselect" id="movie-d"></h3><h3 class="movieselect" id="movie-t"></h3></div>
+		<div class="bookingblock">
+		  <div class="seatblock">
 			Standard
 			  <div>
-				Adult
-				<select name="seats[STA]" form="booking">
-				<option value=''>Blank</option>											
+				<label for="seats[STA]">Adult</label>
+				<select name="seats[STA]" id="seats-STA" form="booking">
+				<option value=''>Select</option>											
 				<option value="1">1</option>
 				<option value="2">2</option>
 				<option value="3">3</option>
@@ -285,11 +263,12 @@
 				<option value="9">9</option>				 
 				<option value="10">10</option>				 
 			</select>
+			
 			  </div>				
-			<div>
-				Concession
-				<select name="seats[STP]" form="booking">
-				<option value=''>Blank</option>											
+			<div>	
+				<label for="seats[STP]">Concession</label>
+				<select name="seats[STP]" id="seats-STP" form="booking">
+				<option value=''>Select</option>											
 			  	<option value="1">1</option>
 				<option value="2">2</option>
 				<option value="3">3</option>
@@ -300,12 +279,12 @@
 				<option value="8">8</option>				 
 				<option value="9">9</option>				 
 				<option value="10">10</option>				 
-		  	</select>
-			  </div>
+		  	</select>	
+		    </div>
 			<div>
-				Children
-				<select name="seats[STC]" form="booking">
-				<option value=''>Blank</option>											
+				<label for="seats[STC]">Children</label>
+				<select name="seats[STC]" id="seats-STC" form="booking">
+				<option value=''>Select</option>											
 			  	<option value="1">1</option>
 				<option value="2">2</option>
 				<option value="3">3</option>
@@ -316,15 +295,15 @@
 				<option value="8">8</option>				 
 				<option value="9">9</option>				 
 				<option value="10">10</option>				 
-			</select>	
+			</select>
 			</div>
           </div>
 		  		<div class="seatblock">
 				First Class
 				  <div>
-					Adult 
-					<select name="seats[FCA]" form="booking">
-					<option value=''>Blank</option>											
+					<label for="seats[FCA]">Adult</label>
+					<select name="seats[FCA]" id="seats-FCA" form="booking">
+					<option value=''>Select</option>											
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -338,9 +317,9 @@
 					</select>
 				  </div>
 				  <div>
-					Concession
-					<select name="seats[FCP]" form="booking">
-					<option value=''>Blank</option>										
+					<label for="seats[FCP]">Concession</label>
+					<select name="seats[FCP]" id="seats-FCP" form="booking">													   
+					<option value=''>Select</option>										
 			 		<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -354,9 +333,9 @@
 					</select>
 				  </div>
 				  <div>
-					Children				  
-					<select name="seats[FCC]" form="booking">
-					<option value=''>Blank</option>										
+					<label for="seats[FCC]">Children</label>				  
+					<select name="seats[FCC]" id="seats-FCC" form="booking">
+					<option value=''>Select</option>										
 			  		<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -369,22 +348,42 @@
 					<option value="10">10</option>				 
 					</select>
 				  </div>
-          </div>					   
-			</div>
+					<div>
+							<h4>Total:</h4>
+							<h4 id="total">price</h4>
+					</div> 
+          </div>
+		</div>
 		  <div class="bookingblock">
-			<input type="hidden"	id="movie-id"	name="movie[id]" 	value=''>
-			<input type="hidden"	id="movie-day"	name="movie[day]" 	value=''>
-			<input type="hidden"	id="movie-hour"	name="movie[hour]"	value=''>										
-			<div>Name			<input type="text" 		name='cust[name]'	></div>
-			<div>Email			<input type="email"		name='cust[email]'	></div>
-			<div>Mobile			<input type="tel"		name='cust[mobile]'	></div>	
-			<div>Credit Card	<input type="text" 		name='cust[card]'	></div>
-			<div>Expiry			<input type="month"		name='cust[expiry]'	></div>												 </div>
-			<div>
-					Order<input type="submit"	name="order			">
+				<div class="filling">
+					<label class="filling" for="cust[name]">Name</label>				   
+					<input type="text" 		name='cust[name]'	required="required">
 				</div>
-															 
-        </form>			
+				<div class="filling">
+					<label for="cust[email]">Email</label>	
+					<input type="email"		name='cust[email]'	required="required">
+				</div>
+				<div class="filling">
+					<label for="cust[mobile]">Mobile</label>														   
+					<input type="tel"		name='cust[mobile]'	required="required"	pattern="04.{8}" title="enter 10 digit">
+				</div>
+			
+				<div class="filling">
+					<label for="cust[card]">Credit Card</label>
+					<input type="text" 		name='cust[card]'	required="required"	pattern="[0-9]{14,19}" title="enter 14-19 number"></div>																									   
+				<div class="filling">
+					<label for="cust[expiry]">Expiry</label>
+					<input type="month"		name='cust[expiry]'	required="required">
+				</div>
+				<input type="submit" name="Order">
+			</div>
+		  </div>
+				<div>
+					<input type="hidden"	id="movie-id"	name="movie[id]" 	value=''>
+					<input type="hidden"	id="movie-day"	name="movie[day]" 	value=''>
+					<input type="hidden"	id="movie-hour"	name="movie[hour]"	value=''>			
+		  </div>
+      </form>			
 	</div>
 </section>
 </main>
