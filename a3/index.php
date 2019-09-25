@@ -357,7 +357,7 @@
 		  <div class="bookingblock">
 				<div class="filling">
 					<label class="filling" for="cust[name]">Name</label>				   
-					<input type="text" 		name='cust[name]'	required="required">
+					<input type="text" 		name='cust[name]'	required="required" pattern="[a-zA-Z \-.']{1,100}">
 				</div>
 				<div class="filling">
 					<label for="cust[email]">Email</label>	
@@ -365,7 +365,7 @@
 				</div>
 				<div class="filling">
 					<label for="cust[mobile]">Mobile</label>														   
-					<input type="tel"		name='cust[mobile]'	required="required"	pattern="04.{8}" title="enter 10 digit">
+					<input type="tel"		name='cust[mobile]'	required="required"	pattern="(\(04\)|04|\+614)( ?\d){8}" title="enter 10 digit">
 				</div>
 			
 				<div class="filling">
