@@ -1,0 +1,323 @@
+.header {
+	background-color: #262626;
+	text-align: center;
+	font-size: 25px;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+#nav-logo {
+	width: 100%;
+	display: inline-flex;
+	background-color: black;
+	padding-left: 10px;
+}
+
+#nav-logo h1{
+	margin-right: -25px;
+	position: relative;
+	bottom: 7px;
+	
+}
+
+
+
+
+#navbar {
+	overflow: hidden;
+	background-color: #0C0608;
+	font-family: "SF-Pro-Text-Light";
+	z-index:1;
+}
+
+
+#navbar a {
+  	float: left;
+	color: #f2f2f2;
+  	text-align: center;
+	padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  	text-decoration: none;
+  	font-size: 17px;
+	font-weight: 400;
+	display: inline-block;
+	
+}
+
+#navbar a:hover{
+	background-color: #FF9900;
+	color: black;
+}
+
+.active {
+	background-color: #FF9900;
+	color: black;
+}
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.content {
+}
+
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust:100%;
+	
+}
+
+body {
+    margin: 0;
+    padding:0;
+	background-color: #17171d;
+	color: whitesmoke;
+	font-family: "SF-Pro-Text-Regular";
+	
+}
+section {
+	min-height: 100%;
+}
+
+
+
+
+#nowshowing {
+	padding: 10px;	
+	
+}
+.postblock{
+	align-items: flex-start;
+	border: medium;
+	align-self: auto;
+	display: inline-block;
+	background-color: #3F3F3F;
+	
+}
+
+.fixsize{
+	display: inline-block;
+	
+}
+.timetable{
+	display: inline-block;
+	width: 300px;
+	position: relative;
+	bottom:70px
+	
+}
+
+.postblock img{
+	width: 300px;
+	
+}
+
+
+#title {
+	text-align: left;
+}
+
+
+#nowshowing  h6{
+	
+	color: #D8D8D8;
+}
+
+
+#nowshowing  h2{
+	text-align: center;
+
+}
+#nowshowing  h4{
+	text-align: right;
+	position: relative;
+	top: 280px;
+	right: 30px;
+	font-size: 25px;
+
+}
+
+#nowshowing  h5{
+
+	text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 10px;
+}
+
+
+
+.grid-item {
+  background-color:#262626;
+  
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+@font-face{
+	font-family:"SF-Pro-Text-Regular";
+	src: url("../../webfonts/SF-Pro-Text-Regular.otf");
+}
+@font-face{
+	font-family:"SF-Pro-Text-Light";
+	src: url("../../webfonts/SF-Pro-Text-Light.otf");
+}
+
+@font-face{
+	font-family:"SF-Pro-Text-Heavy";
+	src: url("../../webfonts/SF-Pro-Text-Heavy.otf");
+}
+@font-face{
+	font-family:"SF-Pro-Text-Semibold";
+	src: url("../../webfonts/SF-Pro-Text-Semibold.otf");
+}
+.parallax { 
+  /* The image used */
+	background-image: url(https://www.dolby.com/uploadedImages/wwwdolbycom/Content/Homepage/dolby-cinema-homepage-3240x1226.jpg);
+	
+
+  /* Set a specific height */
+  height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container {
+  position: relative;
+  text-align: center;
+}
+.top-left {
+	position: absolute;
+	top: 50px;
+	left: 16px;
+	width: 400px;
+	text-align: left;	
+}
+.top-right {
+	position: absolute;
+	top: 50px;
+	right: 16px;
+	width: 600px;
+	text-align: left;	
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#prices {
+	padding: 10px;
+}
+
+#aboutus h1{
+	font-size: 64px;
+	font-family: "SF-Pro-Text-Heavy";
+	width: 600px;
+	text-align: center;
+	margin-bottom: -10px;
+	margin-top: 4px;
+}
+#aboutus h2{
+	font-size: 24px;
+	width: 600px;
+	font-family: "SF-Pro-Text-Semibold";
+	color: #D8D8D8;
+}
+
+#aboutus h5{
+	font-size: 18px;
+}
+
+.seat {
+	padding: 16px;
+	display: inline-flex;
+		
+}
+.seat h3 {
+	width: 400px;
+}
+#chair img {
+	width: 300px;
+}
+.synopsis{
+	background-color: #262626;
+	display: inline-flex;
+}
+#plot{
+	width: 400px;
+
+}
+#synopsistitle h2{
+	float: right;
+}
+
+.seatblock{
+
+	padding-bottom: 30px;
+	width: 100%;
+}
+
+.seatblock select{
+	display: inline-block;
+	
+}
+.seatblock h4{
+	display: inline-block;
+	
+}
+
+.bookingblock{
+	display: inline-block;
+	width: 40%;
+	vertical-align: text-top;
+	height: 100%;
+}
+.filling{
+	margin-bottom: 10px;
+}
+input{
+	width: 40%;
+	float: right
+}
+input[type=submit]{
+	background-color: #FF9900;
+	color: black;
+	text-align: center;
+	border: none;
+	padding: 10px 18px;
+}
+input[type=month]{
+	width: 140px;
+}
+select{
+	width: 50%;
+	float: right;
+}
+
+button{
+	background-color: #FF9900;
+	color: black;
+	text-align: center;
+	border: none;
+	padding: 10px 24px;
+}
+.movieselect{
+	display: inline-block;
+}
