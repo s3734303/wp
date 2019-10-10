@@ -1,6 +1,3 @@
-<?php
-echo "PHP functioning";
-?>
 <!doctype html>
 <html>
 <head>
@@ -17,11 +14,10 @@ echo "PHP functioning";
 		$receiver=input($_POST["receiver"]);
 		$Chain = file("blockchain.txt");
 		if($Chain[count($Chain)-5]==""){
-			$preHashValue="NaN";
+			$preHashValue="NaN\n";
 		}else{
 			$preHashValue = $Chain[count($Chain)-5];
 		}
-		fclose($Chain);
 		$HashValue = md5("$sender.$amount.$receiver.$preHashValue");
 		
 		$addblock = fopen("blockchain.txt", "a");
@@ -47,17 +43,32 @@ echo "PHP functioning";
 	  <input type="submit" name="submit" value="Submit">  
 	</form>
 </section>
+	<textarea cols='80' rows='20'>
 <?php
 	echo $HashValue;
-	echo "<br>";
+	echo "\n";
 	echo $sender;
-	echo "<br>";
+	echo "\n";
 	echo $amount;
-	echo "<br>";
+	echo "\n";
 	echo $receiver;
-	echo "<br>";
+	echo "\n";
 	echo $preHashValue;
-	echo "<br>";												   
+	echo "\n";												   
 ?>
+	</textarea> 
+	 <textarea cols='80' rows='20'>
+		<?php 
+			$lines=file("blockchain.txt");
+			foreach($lines as $line)
+				echo $line;
+													   
+													   
+													  
+													   
+													   
+													   
+		 ?>											   
+		</textarea>
 </body>
 </html>

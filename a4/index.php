@@ -1,10 +1,13 @@
 <!DOCTYPE html>
+<?php
+include("tools.php");
+?>
 <html lang='en'>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible">
-    <title>Assignment 3</title>
+    <title>Assignment 4</title>
     <!-- Keep wireframe.css for debugging, add your css to style.css -->
    <!--<link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>	-->
     <link id='stylecss' type="text/css" rel="stylesheet" href="style.css">
@@ -15,20 +18,67 @@
   </head>
 
   <body  style="background-color: "#F2F2F2">
+	<?php	
+			$days = array('MON','TUE','WED','THU','FRI','SAT','SUN');
+			$time = array('T12','T15','T8','T21');
+			$id   = array('ACT','AHF','ANM','RMC');
+			$cust_card = $cust_expiry = $cust_mobile = $cust_email = $cust_name = $movie_id = $movie_day = $movie_hour = "";
+			$STA = $STP = $STC = $FCA = $FCC = $FCP = '';
+			$price = 0;
+			$suspecious=false;
+			if ($_SERVER["REQUEST_METHOD"] == "POST") {
+				preShow($_POST);
+				$card_v = $expiry_v = $mobile_v = $email_v =$name_v = $id_v = $day_v = $hour_v = $price_v = $seat_v = false;
+				if(filter_var($price,FILTER_VALIDATE_FLOAT) && filter_var($price,FILTER_VALIDATE_FLOAT)>0){
+					$price_v = true;	
+				}else{
+					echo '<img src="../../media/Error.png" width="499" height="245" alt="icon"/>';
+					echo "price";
+				}
+				if(filter_var($cust_email,FILTER_VALIDATE_EMAIL)){
+					$email_v = true;
+				}else{
+					
+				}
+				if(in_array($movie_day,$days)){
+					$day_v = true;
+				}else{
+					echo "day";
+				}
+				if(in_array($movie_hour,$time)){
+					$hour_v = true;
+				}else{
+					echo "hour";
+				}
+				if(in_array($movie_id,$id)){
+					$id_v = true;
+				}else{
+					echo "id";
+				}
+				if(filter_var(strtotime($cust_expiry)>=strtotime(time()))){
+					$day_v = true;
+				}else{
+					
+				}
+				if($card_v&&$expiry_v&&$mobile_v&&$email_v&&$name_v&&$id_v&&$day_v&&$hour_v&&$price_v){
+					$_SESSION['receipt'] = $_POST;
+					preShow($_SESSION['receipt'] );
+				}
+			}
+			
+			
+			
+		
+		
+																						
+		?>
 	
-  <header>
+	<header>
 	  <div>
-		  <div id="nav-logo" class="header">
-		<h1>Cinema</h1>
-		<a href="index.php"><img src="../../media/logo.png" alt="logo" ></a>
-	    </div>
-		  
-		  
-		  
-	  <nav> 
-		  <div id="navbar">
+<nav> 
+	    <div id="navbar">
 		 	 <a href="#aboutus" 	class="navlink">About Us</a> </li>
-	  		<a href="#prices" 		class="navlink">Prices</a> </li>      
+	  		<a href="#prices" 		class="navlink">Prices</a> </li>
 	 		<a href="#nowshowing" 	class="navlink">Now Showing</a></li>
 	  </div>
       
@@ -243,7 +293,7 @@
 	</div>
 <div>
 		
-		<form method="post" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" id="booking" name="bookingform" onsubmit="return formValidation()">
+		<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" id="booking" name="bookingform" onsubmit="return formValidation()">
 		<div><h3 class="movieselect" id="movie-title"></h3><h3 class="movieselect" id="movie-d"></h3><h3 class="movieselect" id="movie-t"></h3></div>
 		<div class="bookingblock">
 		  <div class="seatblock">
@@ -251,7 +301,7 @@
 			  <div>
 				<label for="seats[STA]">Adult</label>
 				<select name="seats[STA]" id="seats-STA" form="booking">
-				<option value=''>Select</option>											
+				<option value='<?php echo $STA;?>'>Select</option>											
 				<option value="1">1</option>
 				<option value="2">2</option>
 				<option value="3">3</option>
@@ -268,7 +318,7 @@
 			<div>	
 				<label for="seats[STP]">Concession</label>
 				<select name="seats[STP]" id="seats-STP" form="booking">
-				<option value=''>Select</option>											
+				<option value='<?php echo $STP;?>'>Select</option>											
 			  	<option value="1">1</option>
 				<option value="2">2</option>
 				<option value="3">3</option>
@@ -284,7 +334,7 @@
 			<div>
 				<label for="seats[STC]">Children</label>
 				<select name="seats[STC]" id="seats-STC" form="booking">
-				<option value=''>Select</option>											
+				<option value='<?php echo $STC;?>'>Select</option>											
 			  	<option value="1">1</option>
 				<option value="2">2</option>
 				<option value="3">3</option>
@@ -303,7 +353,7 @@
 				  <div>
 					<label for="seats[FCA]">Adult</label>
 					<select name="seats[FCA]" id="seats-FCA" form="booking">
-					<option value=''>Select</option>											
+					<option value='<?php echo $FCA;?>'>Select</option>											
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -318,8 +368,8 @@
 				  </div>
 				  <div>
 					<label for="seats[FCP]">Concession</label>
-					<select name="seats[FCP]" id="seats-FCP" form="booking">													   
-					<option value=''>Select</option>										
+					<select name="seats[FCP]" id="seats-FCP" form="booking">
+					<option value='<?php echo $FCP;?>'>Select</option>										
 			 		<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -335,7 +385,7 @@
 				  <div>
 					<label for="seats[FCC]">Children</label>				  
 					<select name="seats[FCC]" id="seats-FCC" form="booking">
-					<option value=''>Select</option>										
+					<option value='<?php echo $FCC;?>'>Select</option>										
 			  		<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -350,40 +400,49 @@
 				  </div>
 					<div>
 							<h4>Total:</h4>
-							<h4 id="total">price</h4>
+					  <h4 id="total"></h4>
 					</div> 
           </div>
 		</div>
 		  <div class="bookingblock">
+								   
 				<div class="filling">
 					<label class="filling" for="cust[name]">Name</label>				   
-					<input type="text" 		name='cust[name]'	required="required" pattern="[a-zA-Z \-.']{1,100}">
+				  <input type="text" 		name='cust[name]'	required="required" pattern="[a-zA-Z \-.']{1,100}" vaule="<?php echo $cust_name;?>">
 				</div>
+																										 
 				<div class="filling">
 					<label for="cust[email]">Email</label>	
-					<input type="email"		name='cust[email]'	required="required">
+				  <input type="email"		name='cust[email]'	required="required" vaule="<?php echo $cust_email;?>">
 				</div>
+															  
 				<div class="filling">
 					<label for="cust[mobile]">Mobile</label>														   
-					<input type="tel"		name='cust[mobile]'	required="required"	pattern="(\(04\)|04|\+614)( ?\d){8}" title="enter 10 digit">
+				  <input type="tel"		name='cust[mobile]'	required="required"	pattern="(\(04\)|04|\+614)( ?\d){8}" title="enter 10 digit" vaule="<?php echo $cust_mobile;?>">
 				</div>
 			
 				<div class="filling">
 					<label for="cust[card]">Credit Card</label>
-					<input type="text" 		name='cust[card]'	required="required"	pattern="[0-9]{14,19}" title="enter 14-19 number"></div>																									   
+				  <input type="text" 		name='cust[card]'	required="required"	pattern="[0-9]{14,19}" title="enter 14-19 number" vaule="<?php echo $cust_card;?>"></div>																									   
 				<div class="filling">
 					<label for="cust[expiry]">Expiry</label>
-					<input type="month"		name='cust[expiry]'	required="required">
+				  <input type="month"		name='cust[expiry]'	required="required" vaule="<?php echo $cust_expiry;?>">
 				</div>
+					<input type="hidden"	id="movie-id"	name='movie[id]' 	value='<?php echo $movie_id;?>'>
+					<input type="hidden"	id="movie-day"	name='movie[day]' 	value='<?php echo $movie_day;?>'>
+					<input type="hidden"	id="movie-hour"	name='movie[hour]'	value='<?php echo $movie_hour;?>'>
+					<input type="hidden"		id="cust-price"	name='cust[price]'	value='<?php echo $price?>'>
 				<input type="submit" name="Order">
-			</div>
 		  </div>
+		  	</div>
 				<div>
-					<input type="hidden"	id="movie-id"	name="movie[id]" 	value=''>
-					<input type="hidden"	id="movie-day"	name="movie[day]" 	value=''>
-					<input type="hidden"	id="movie-hour"	name="movie[hour]"	value=''>			
+					
+
+					
 		  </div>
-      </form>			
+      </form>
+		 
+		
 	</div>
 </section>
 </main>
@@ -396,8 +455,10 @@
       <div>
         <p>Disclaimer: This website is not a real website and is being developed as part of a Schoolof Science Web Programming course at RMIT University in Melbourne, Australia.</p>
       </div>
-      <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
+      <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button>
+	</div>
   </footer>
 </body>
 <script src='javascript.js'></script>
 </html>
+<?php printMyCode();?>

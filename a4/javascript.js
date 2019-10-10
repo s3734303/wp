@@ -156,5 +156,6 @@ function priceCalc(){
 		total = STA*19.8 + STP*17.5 + STC*15.3 + FCA*30 + FCP*27 + FCC*24;
 	}
 	document.getElementById("total").innerHTML ='$' + total.toFixed(2);
+	document.getElementById("cust-price").value=total.toFixed(2);
 }
 setInterval(priceCalc,100);
