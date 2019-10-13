@@ -159,3 +159,10 @@ function priceCalc(){
 	document.getElementById("cust-price").value=total.toFixed(2);
 }
 setInterval(priceCalc,100);
+
+
+function receiptPopUp() {
+  ;
+}
+
+

@@ -61,9 +61,13 @@ include("tools.php");
 					
 				}
 				if($card_v&&$expiry_v&&$mobile_v&&$email_v&&$name_v&&$id_v&&$day_v&&$hour_v&&$price_v){
-					$_SESSION['receipt'] = $_POST;
-					preShow($_SESSION['receipt'] );
+					echo "ok";
 				}
+				$_SESSION['receipt'] = $_POST;
+					$link="<script>window.open('receipt.php','_self')</script>";
+					echo $link;
+					preShow($_SESSION['receipt'] );
+				
 			}
 			
 			

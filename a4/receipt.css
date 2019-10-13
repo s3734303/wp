@@ -1,0 +1,58 @@
+.header {
+	background-color: #262626;
+	text-align: center;
+	font-size: 25px;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust:100%;
+	
+}
+
+body {
+    margin: 0;
+    padding:0;
+	background-color: #17171d;
+	color: whitesmoke;
+	font-family: "SF-Pro-Text-Regular";
+	width: 60%;
+	align-self: center;
+}
+
+
+@font-face{
+	font-family:"SF-Pro-Text-Regular";
+	src: url("../../webfonts/SF-Pro-Text-Regular.otf");
+}
+@font-face{
+	font-family:"SF-Pro-Text-Light";
+	src: url("../../webfonts/SF-Pro-Text-Light.otf");
+}
+
+@font-face{
+	font-family:"SF-Pro-Text-Heavy";
+	src: url("../../webfonts/SF-Pro-Text-Heavy.otf");
+}
+@font-face{
+	font-family:"SF-Pro-Text-Semibold";
+	src: url("../../webfonts/SF-Pro-Text-Semibold.otf");
+}
+#receipt_header{
+	font-size: 30px;
+	text-align: center;
+}
+#receipt h1{
+	font-size: 28px;
+}
+
+#receipt_title{
+	text-align: center;
+	font-size: 25px;
+}
+#movie_time{
+	display: inline-block;
+}
+table{
+	text-align: left;
+}
