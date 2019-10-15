@@ -20,7 +20,7 @@ include("tools.php");
   <body  style="background-color: "#F2F2F2">
 	<?php	
 			$days = array('MON','TUE','WED','THU','FRI','SAT','SUN');
-			$time = array('T12','T15','T8','T21');
+			$time = array('T12','T15','T18','T21');
 			$id   = array('ACT','AHF','ANM','RMC');
 			$cust_card = $cust_expiry = $cust_mobile = $cust_email = $cust_name = $movie_id = $movie_day = $movie_hour = "";
 			$STA = $STP = $STC = $FCA = $FCC = $FCP = '';
@@ -29,52 +29,74 @@ include("tools.php");
 			if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				preShow($_POST);
 				$card_v = $expiry_v = $mobile_v = $email_v =$name_v = $id_v = $day_v = $hour_v = $price_v = $seat_v = false;
-				if(filter_var($price,FILTER_VALIDATE_FLOAT) && filter_var($price,FILTER_VALIDATE_FLOAT)>0){
+				if(filter_var($_POST['cust']['price'],FILTER_VALIDATE_FLOAT) && filter_var($_POST['cust']['price'],FILTER_VALIDATE_FLOAT)>0){
 					$price_v = true;	
 				}else{
-					echo '<img src="../../media/Error.png" width="499" height="245" alt="icon"/>';
-					echo "price";
+					
+					
 				}
-				if(filter_var($cust_email,FILTER_VALIDATE_EMAIL)){
+				if(filter_var( $_POST['cust']['email'],FILTER_VALIDATE_EMAIL)){
 					$email_v = true;
 				}else{
+					echo $_POST['cust']['email'];
 					
 				}
-				if(in_array($movie_day,$days)){
+				if(in_array($_POST['movie']['day'],$days)){
 					$day_v = true;
 				}else{
-					echo "day";
+					
+					
 				}
-				if(in_array($movie_hour,$time)){
+				if(in_array( $_POST['movie']['hour'],$time)){
 					$hour_v = true;
 				}else{
-					echo "hour";
+					
+					
 				}
-				if(in_array($movie_id,$id)){
-					$id_v = true;
+				if(in_array($_POST['movie']['id'],$id)){
+					$id_v =true;
 				}else{
-					echo "id";
+					echo '<img src="../../media/Error.png" width="499" height="245" alt="icon"/>';
+					
 				}
-				if(filter_var(strtotime($cust_expiry)>=strtotime(time()))){
-					$day_v = true;
+				if(filter_var(strtotime($_POST['cust']['expiry'])>=strtotime(time()))){
+					
+				}
+				else{
+					
+					
+				}
+				if(is_numeric($_POST['cust']['mobile']) && preg_match('^04[0-9]{4}^',$_POST['cust']['mobile'])){
+					$mobile_v=true;
 				}else{
 					
 				}
-				if($card_v&&$expiry_v&&$mobile_v&&$email_v&&$name_v&&$id_v&&$day_v&&$hour_v&&$price_v){
-					echo "ok";
+				if(is_numeric($_POST['cust']['card']) && (strlen($_POST['cust']['card'])>=14 || strlen($_POST['cust']['card']<=19))){
+					$card_v = true;
+				}else{
+					
 				}
-				$_SESSION['receipt'] = $_POST;
+				if(preg_match('^[a-zA-Z-]{1,100}^',$_POST['cust']['name'])){
+					$name_v;
+				}else{
+					
+				}
+				
+				
+				if($card_v&&$expiry_v&&$mobile_v&&$email_v&&$name_v&&$id_v&&$day_v&&$hour_v&&$price_v){
+					$_SESSION['receipt'] = $_POST;
 					$link="<script>window.open('receipt.php','_self')</script>";
 					echo $link;
 					preShow($_SESSION['receipt'] );
+					
+				}else{
+						echo '<img src="../../media/Error.png" width="499" height="245" alt="icon"/>';
+						session_destroy();
+				}
 				
-			}
-			
-			
-			
-		
-		
-																						
+					
+				
+			}																				
 		?>
 	
 	<header>

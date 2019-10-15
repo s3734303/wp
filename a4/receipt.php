@@ -72,7 +72,7 @@ $gst = $receipt['cust']['price']/11;
 	</article>
 <article id="receipt_price">
   <div style="font-size: 25px;margin-bottom: -50px">
-    <div align="left" style="width: 84%;display: inline-block"><h1>Total:</h1></div>
+    <div align="left" style="width: 90%;display: inline-block"><h1>Total:</h1></div>
     <div id="price_amount" style="display: inline-block;text-align: right">$<?php echo $receipt['cust']['price']?></div>
   </div>
 	<div style="text-align: right"><h5>(Include&nbsp;GST<?php echo round($gst,2);?>)</h5></div>
