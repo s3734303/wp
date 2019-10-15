@@ -25,46 +25,35 @@ include("tools.php");
 			$cust_card = $cust_expiry = $cust_mobile = $cust_email = $cust_name = $movie_id = $movie_day = $movie_hour = "";
 			$STA = $STP = $STC = $FCA = $FCC = $FCP = '';
 			$price = 0;
-			$suspecious=false;
+			$err_email = $err_card = $err_expiry = $err_name ="";
 			if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				preShow($_POST);
-				$card_v = $expiry_v = $mobile_v = $email_v =$name_v = $id_v = $day_v = $hour_v = $price_v = $seat_v = false;
+				$card_v = $expiry_v = $mobile_v = $email_v =$name_v = $id_v = $day_v = $hour_v = $price_v = $seat_v = $error = false;
+				
 				if(filter_var($_POST['cust']['price'],FILTER_VALIDATE_FLOAT) && filter_var($_POST['cust']['price'],FILTER_VALIDATE_FLOAT)>0){
 					$price_v = true;	
 				}else{
-					
-					
+					$error = true;
 				}
 				if(filter_var( $_POST['cust']['email'],FILTER_VALIDATE_EMAIL)){
 					$email_v = true;
 				}else{
-					echo $_POST['cust']['email'];
-					
+					$err_email = "invalid Email format";
 				}
 				if(in_array($_POST['movie']['day'],$days)){
 					$day_v = true;
-				}else{
-					
-					
 				}
 				if(in_array( $_POST['movie']['hour'],$time)){
 					$hour_v = true;
-				}else{
-					
-					
 				}
 				if(in_array($_POST['movie']['id'],$id)){
 					$id_v =true;
-				}else{
-					echo '<img src="../../media/Error.png" width="499" height="245" alt="icon"/>';
-					
 				}
 				if(filter_var(strtotime($_POST['cust']['expiry'])>=strtotime(time()))){
-					
+					$expiry_v=true;
 				}
-				else{
-					
-					
+				else{				
+					$err_expiry="invalid expiry date";
 				}
 				if(is_numeric($_POST['cust']['mobile']) && preg_match('^04[0-9]{4}^',$_POST['cust']['mobile'])){
 					$mobile_v=true;
@@ -74,15 +63,16 @@ include("tools.php");
 				if(is_numeric($_POST['cust']['card']) && (strlen($_POST['cust']['card'])>=14 || strlen($_POST['cust']['card']<=19))){
 					$card_v = true;
 				}else{
-					
+					$err_card = "invalid card";
 				}
 				if(preg_match('^[a-zA-Z-]{1,100}^',$_POST['cust']['name'])){
-					$name_v;
+					$name_v=true;
 				}else{
-					
+					$err_name="invalid character";
 				}
-				
-				
+				if($error){
+					echo '<img src="../../media/Stop.png" width=100% alt="icon"/>';
+				}
 				if($card_v&&$expiry_v&&$mobile_v&&$email_v&&$name_v&&$id_v&&$day_v&&$hour_v&&$price_v){
 					$_SESSION['receipt'] = $_POST;
 					$link="<script>window.open('receipt.php','_self')</script>";
@@ -90,19 +80,17 @@ include("tools.php");
 					preShow($_SESSION['receipt'] );
 					
 				}else{
-						echo '<img src="../../media/Error.png" width="499" height="245" alt="icon"/>';
+						
 						session_destroy();
 				}
-				
 					
-				
 			}																				
 		?>
 	
 	<header>
 	  <div>
-<nav> 
-	    <div id="navbar">
+<nav>
+      <div id="navbar">
 		 	 <a href="#aboutus" 	class="navlink">About Us</a> </li>
 	  		<a href="#prices" 		class="navlink">Prices</a> </li>
 	 		<a href="#nowshowing" 	class="navlink">Now Showing</a></li>
@@ -434,12 +422,12 @@ include("tools.php");
 								   
 				<div class="filling">
 					<label class="filling" for="cust[name]">Name</label>				   
-				  <input type="text" 		name='cust[name]'	required="required" pattern="[a-zA-Z \-.']{1,100}" vaule="<?php echo $cust_name;?>">
+				  <input type="text" 		name='cust[name]'	required="required" pattern="[a-zA-Z \-.']{1,100}" vaule="<?php echo $cust_name;?>"><?php echo $err_name?>	
 				</div>
 																										 
 				<div class="filling">
 					<label for="cust[email]">Email</label>	
-				  <input type="email"		name='cust[email]'	required="required" vaule="<?php echo $cust_email;?>">
+				  <input type="email"		name='cust[email]'	required="required" vaule="<?php echo $cust_email;?>"><?php echo $err_email?>
 				</div>
 															  
 				<div class="filling">
@@ -449,7 +437,7 @@ include("tools.php");
 			
 				<div class="filling">
 					<label for="cust[card]">Credit Card</label>
-				  <input type="text" 		name='cust[card]'	required="required"	pattern="[0-9]{14,19}" title="enter 14-19 number" vaule="<?php echo $cust_card;?>"></div>																									   
+				  <input type="text" 		name='cust[card]'	required="required"	pattern="[0-9]{14,19}" title="enter 14-19 number" vaule="<?php echo $cust_card;?>"></div><?php echo $err_expiry?>																									   
 				<div class="filling">
 					<label for="cust[expiry]">Expiry</label>
 				  <input type="month"		name='cust[expiry]'	required="required" vaule="<?php echo $cust_expiry;?>">
@@ -457,7 +445,7 @@ include("tools.php");
 					<input type="hidden"	id="movie-id"	name='movie[id]' 	value='<?php echo $movie_id;?>'>
 					<input type="hidden"	id="movie-day"	name='movie[day]' 	value='<?php echo $movie_day;?>'>
 					<input type="hidden"	id="movie-hour"	name='movie[hour]'	value='<?php echo $movie_hour;?>'>
-					<input type="hidden"		id="cust-price"	name='cust[price]'	value='<?php echo $price?>'>
+					<input type="hidden"	id="cust-price"	name='cust[price]'	value='<?php echo $price?>'>
 				<input type="submit" name="Order">
 		  </div>
 		  	</div>

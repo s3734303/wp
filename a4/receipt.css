@@ -39,20 +39,21 @@ body {
 	src: url("../../webfonts/SF-Pro-Text-Semibold.otf");
 }
 #receipt_header{
-	font-size: 30px;
+	font-size: 40px;
 	text-align: center;
 }
 #receipt h1{
 	font-size: 28px;
-}
-
-#receipt_title{
-	text-align: center;
-	font-size: 25px;
 }
 #movie_time{
 	display: inline-block;
 }
 table{
 	text-align: left;
+}
+hr{
+	color: white;
+}
+@media print {
+  article {page-break-after: always;}
 }

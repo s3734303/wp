@@ -23,21 +23,18 @@ $gst = $receipt['cust']['price']/11;
 		<input type="hidden" name='cust[price]' value="<?php echo $receipt['movie']['hour'];?>">
 		
 	</form>
-	<div id="receipt_header"><h1>Tax Invoice</h1></div>
+	
 
 <article id="receipt_title">
+	<div>
+	  <h1 style="text-align: center; font-size:35px ">CinemaHub</h1>
+		<h5>ABN:00 123 456 789 </h5>
+	</div>
+<div id="receipt_header"><h1>Tax Invoice</h1></div>
 		<div>
-		<div id="movie_name_display"><h2 id="movie_title">movie_name</h2></div>
-		<div id="movie_time">
-			  <h2 style="display: inline-block"><?php echo $receipt['movie']['day']?>-</h2>
-            <h2 id="movie_hour" style="display: inline-block"></h2>
-          </div>
+
   </div>	
-</article>
-<article id="receipt_seats" align="center">
-	
-	
-<table width="90%" cellspacing="0" cellpadding="0" id="seat_table" align="center" style="text-align: center">
+	<table width="90%" cellspacing="0" cellpadding="0" id="seat_table" align="center" style="text-align: center">
     <tbody>
       <tr height="50">
         <th scope="col"><h3>SEAT CLASS</h3></th>
@@ -51,7 +48,7 @@ $gst = $receipt['cust']['price']/11;
         <th scope="row">STP</th>
         <td ><?php echo $receipt['seats']['STP'];?></td>
       </tr>
-      <tr id="seat_STC" height="40" style="display: none">
+      <tr id="seat_STC" height="40">
         <th scope="row">STC</th>
         <td ><?php echo $receipt['seats']['STC'];?></td>
       </tr>
@@ -69,17 +66,12 @@ $gst = $receipt['cust']['price']/11;
       </tr>
     </tbody>
 </table>
-	</article>
-<article id="receipt_price">
-  <div style="font-size: 25px;margin-bottom: -50px">
-    <div align="left" style="width: 90%;display: inline-block"><h1>Total:</h1></div>
+	  <div style="font-size: 25px;margin-bottom: -50px">
+    <div align="left" style="width: 75%;display: inline-block"><h1>Total:</h1></div>
     <div id="price_amount" style="display: inline-block;text-align: right">$<?php echo $receipt['cust']['price']?></div>
   </div>
-	<div style="text-align: right"><h5>(Include&nbsp;GST<?php echo round($gst,2);?>)</h5></div>
-
-</article>
-<article id="receipt_customer">
-  <div><h3>Customer Details</h3></div>
+	<div style="text-align: right;width: 95%"><h5>(Include&nbsp;GST<?php echo round($gst,2);?>)</h5></div>
+	 <div><h3>Customer Details</h3></div>
 <table width="40%"  align="center">
   <tbody>
     <tr>
@@ -104,14 +96,22 @@ $gst = $receipt['cust']['price']/11;
       </tr>
     </tbody>
 </table>
-	
-	
-	
+ 
+	</article>
+
+<article id="ticket">
+	<div><h1 style="font-size: 38px;margin-left: 10%">Ticket</h1><hr></div>
+	<div id="movie_name_display"><h2 id="movie_title">movie_name</h2></div>
+		<div id="movie_time">
+			  <h2 style="display: inline-block"><?php echo $receipt['movie']['day']?>-</h2>
+            <h2 id="movie_hour" style="display: inline-block"></h2>
+          </div>
 	</article>
 </body>
 	<script src='receipt.js'></script>
 </html>
 <?php
+php2js($receipt['cust']['price'],"price");
 session_destroy();
 
 ?>
