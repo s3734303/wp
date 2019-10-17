@@ -1,5 +1,4 @@
 .header {
-	background-color: #262626;
 	text-align: center;
 	font-size: 25px;
 	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
@@ -13,8 +12,8 @@ html {
 body {
     margin: 0;
     padding:0;
-	background-color: #17171d;
-	color: whitesmoke;
+
+
 	font-family: "SF-Pro-Text-Regular";
 	width: 60%;
 	align-self: center;

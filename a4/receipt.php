@@ -111,7 +111,6 @@ $gst = $receipt['cust']['price']/11;
 	<script src='receipt.js'></script>
 </html>
 <?php
-php2js($receipt['cust']['price'],"price");
 session_destroy();
 
 ?>
