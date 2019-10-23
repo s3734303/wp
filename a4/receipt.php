@@ -17,7 +17,7 @@ $fp = fopen('bookings.txt', 'a');
   (array) $prices
 );
 
-fputcsv($fp, $cells);
+fputcsv($fp, $cells,"\t");
 fclose($fp);
 }
 
