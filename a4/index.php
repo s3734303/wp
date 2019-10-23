@@ -484,5 +484,4 @@ include("tools.php");
 <script src='javascript.js'></script>
 </html>
 <?php preShow($_POST );?>
-<?php preShow($_SESSION['receipt'] );?>
 <?php printMyCode();?>

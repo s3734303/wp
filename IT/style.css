@@ -14,8 +14,8 @@ html {
 body {
     margin: 0;
     padding:0;
-	background-color: #17171d;
-	color: whitesmoke;
+	background-color: #F2C063;
+	color: #400E17;
 	font-family: "SF-Pro-Text-Regular";
 	
 }
@@ -37,22 +37,13 @@ body {
 	font-family:"SF-Pro-Text-Semibold";
 	src: url("../../webfonts/SF-Pro-Text-Semibold.otf");
 }
+input[type=text]{
+	
+}
+.inputfield{
 
-input{
-	width: 40px;
-
 }
-
-
-#sendvote {
-}
-#votingbooth {
-}
-#votingauthority {
-}
-#inputp {
-}
-#inputq {
-}
-#menu {
+#setup{
+	background-color: #F2F2F2;
+	font-size: 18px;
 }

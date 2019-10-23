@@ -4,9 +4,24 @@ if(!isset($_SESSION['receipt'])){
 	$link="<script>window.open('index.php','_self')</script>";
 	echo $link;
 }else{
-	$receipt = $_SESSION['receipt'];
+	$now =date('d/m h:i');
+	$receipt  = $_SESSION['receipt'];
+$fp = fopen('bookings.txt', 'a');
+	$prices = $receipt['cust']['price'];
+	unset($receipt['cust']['price']);
+	$cells = array_merge(
+	[$now],
+	$receipt['cust'],	
+	$receipt['movie'],
+	$receipt['seats'],	
+  (array) $prices
+);
+
+fputcsv($fp, $cells);
+fclose($fp);
 }
-$gst = $receipt['cust']['price']/11;
+
+$gst =$prices/11;
 
 ?>
 <!doctype html>
@@ -68,7 +83,7 @@ $gst = $receipt['cust']['price']/11;
 </table>
 	  <div style="font-size: 25px;margin-bottom: -50px">
     <div align="left" style="width: 75%;display: inline-block"><h1>Total:</h1></div>
-    <div id="price_amount" style="display: inline-block;text-align: right">$<?php echo $receipt['cust']['price']?></div>
+    <div id="price_amount" style="display: inline-block;text-align: right">$<?php echo $prices?></div>
   </div>
 	<div style="text-align: right;width: 95%"><h5>(Include&nbsp;GST<?php echo round($gst,2);?>)</h5></div>
 	 <div><h3>Customer Details</h3></div>
