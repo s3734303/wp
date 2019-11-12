@@ -67,7 +67,7 @@
 										<h5>Index: $index</h5>
 										<p>Hash :$bloc_arr[0]</p>
 										<p>Sender :$bloc_arr[1]</p>
-										<p>Amount :$bloc_arr[2]</p>
+										<p>Amount :$$bloc_arr[2]</p>
 										<p>Receiver :$bloc_arr[3]</p>
 										<p>Time :$bloc_arr[4]</p>
 										<p>Previous Hash :$bloc_arr[5]</p>
